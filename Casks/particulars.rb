@@ -6,25 +6,25 @@ cask "particulars" do
     end
   end
 
-  version "0.20.1"
+  version "0.21.0"
 
   on_macos do
     on_arm do
-      sha256 "92558d5b811106f9360591951c1abe712caa42e331f41fa8ad0e2bbc1f63986c"
+      sha256 "204bcd7b4151503a81ff304bf14fdc972d384a8b36301d8ebe5a91e8e89925c3"
       url "https://github.com/nodelogicau/particulars-cli/releases/download/v#{version}/particulars_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "cbac7d76e159d1571c66d89c2e8e69b60272a8cabf874d9ed41c4c4f7f222fa8"
+      sha256 "db5c28fefb6009d06e1ffe0eff3a2bea5b002089d63585ca83abc66ea9bda3e6"
       url "https://github.com/nodelogicau/particulars-cli/releases/download/v#{version}/particulars_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "281dad6307604e3f43125d6d399f26903bbb1970a242c362f023e6bf379fb0d2"
+      sha256 "0972b77bdd9b57ce7de65d45ca43003dc32ccc79c97315ce81a33ee9c20c4e05"
       url "https://github.com/nodelogicau/particulars-cli/releases/download/v#{version}/particulars_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "06d5fbb88b47bae4b4431e8f3b51366c7ee97b072d91bef4e2fecf225cb3a374"
+      sha256 "ca1c4ab683373ca36ac552782d3319933f8700e25f83eaf379a9c85c5af03d7a"
       url "https://github.com/nodelogicau/particulars-cli/releases/download/v#{version}/particulars_#{version}_linux_amd64.tar.gz"
     end
   end
@@ -39,5 +39,5 @@ cask "particulars" do
 
   binary "particulars"
 
-  # No zap stanza required
+  zap :not_required
 end
