@@ -6,31 +6,26 @@ cask "episodes" do
     end
   end
 
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
-    on_intel do
-      sha256 "611807fe2af6b1be633e031de8a8ea653fd65c801bf25ce76fb20c5db4de44b7"
-      url "https://github.com/nodelogicau/episodes-cli/releases/download/v#{version}/episodes_#{version}_darwin_amd64.tar.gz",
-        verified: "github.com/nodelogicau/episodes-cli/"
-    end
     on_arm do
-      sha256 "971f7c3344a95eb3e69baf3d4ea67c259fcf0d05769320acf0257dc591d6ca25"
-      url "https://github.com/nodelogicau/episodes-cli/releases/download/v#{version}/episodes_#{version}_darwin_arm64.tar.gz",
-        verified: "github.com/nodelogicau/episodes-cli/"
+      sha256 "c3f24894475bd4243fbdb2abfd96fddab008cbb3ab53ff23c835bd919c88a1f6"
+      url "https://github.com/nodelogicau/episodes-cli/releases/download/v#{version}/episodes_#{version}_darwin_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "65fcfeb2d8b313e687cfe28e4f0a70602cc37f033dac34656dc4773bd2894d05"
+      url "https://github.com/nodelogicau/episodes-cli/releases/download/v#{version}/episodes_#{version}_darwin_amd64.tar.gz"
     end
   end
-
   on_linux do
-    on_intel do
-      sha256 "198fe1a4dae6fe083325d40cc9b510ea82940f297a82f1a2eb8ae8f0b1172892"
-      url "https://github.com/nodelogicau/episodes-cli/releases/download/v#{version}/episodes_#{version}_linux_amd64.tar.gz",
-        verified: "github.com/nodelogicau/episodes-cli/"
-    end
     on_arm do
-      sha256 "31a293ff35743f9e2e973f595ea47e4ce85590a98b000071d1c9d5116fe95138"
-      url "https://github.com/nodelogicau/episodes-cli/releases/download/v#{version}/episodes_#{version}_linux_arm64.tar.gz",
-        verified: "github.com/nodelogicau/episodes-cli/"
+      sha256 "b83b1dd9a973cbabd7e7e86b7142852b5c231d1c4bda8e38f3d107b2d6453bbd"
+      url "https://github.com/nodelogicau/episodes-cli/releases/download/v#{version}/episodes_#{version}_linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "3de553f060ec697a63b7f8f25eb783d7c46a215c8ca87a5615eee3ff2851b745"
+      url "https://github.com/nodelogicau/episodes-cli/releases/download/v#{version}/episodes_#{version}_linux_amd64.tar.gz"
     end
   end
 
@@ -44,6 +39,5 @@ cask "episodes" do
 
   binary "episodes"
 
-  # No zap stanza required
-
+  zap :not_required
 end
